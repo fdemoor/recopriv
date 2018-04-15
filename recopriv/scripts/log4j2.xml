@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %M - %msg%n"/>
+    </Console>
+    <File name="SybilAttackResults" fileName="sybilAttack.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="SybilAttackResultsPerRound" fileName="sybilAttackPerRound.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="SybilAttackResultsPerTarget" fileName="sybilAttackPerTarget.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="SybilAttackResultsDetails" fileName="sybilAttackDetails.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="SybilAttackResultsByNbPerfectMatchesClass" fileName="sybilAttackByNbPerfectMatchesClass.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="SybilAttackResultsByNbPerfectMatchesClassWTargetOnly" fileName="sybilAttackByNbPerfectMatchesClassWTargetOnly.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="SybilAttackErrors" fileName="sybilAttackErrors.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %M - %msg%n"/>
+    </File>
+    <File name="Parameters" fileName="parameters.txt">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="EvaluationTime" fileName="evalTime.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %M - %msg%n"/>
+    </File>
+    <File name="MaeRmse" fileName="recoQuality.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="InfoRetrivalStats" fileName="irStats.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="Precomputations" fileName="precomputations.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="AboveThres" fileName="aboveThres.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="buildRecommender" fileName="buildRecommender.log">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="sizeDistrib" fileName="sizeDistrib.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="buildRecommenderMemory" fileName="buildRecommenderMemory.log">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+    <File name="hypotheses" fileName="hypotheses.csv">
+      <PatternLayout pattern="%msg%n"/>
+    </File>
+  </Appenders>
+  
+  <Loggers>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-results" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResults"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-resultsPerRound" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResultsPerRound"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-resultsPerTarget" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResultsPerTarget"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-resultsPerRound" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResultsPerRound"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-resultsDetails" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResultsDetails"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-resultsByNbPerfectMatchesClass" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResultsByNbPerfectMatchesClass"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator-resultsByNbPerfectMatchesClassWTargetOnly" level="info" additivity="false">
+      <AppenderRef ref="SybilAttackResultsByNbPerfectMatchesClassWTargetOnly"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator" level="info" additivity="false">
+    <!--<Logger name="recoPrivResearch.attackEvaluator.NearestNeighborSybilAttackEvaluator" level="debug" additivity="false">-->
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="SybilAttackErrors"/>
+    </Logger>
+    <Logger name="recoPrivResearch.attackEvaluator.AttackStats" level="info" additivity="false">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="SybilAttackErrors"/>
+    </Logger>
+    <Logger name="recoPrivResearch.recommenderBuilder.KNNRecommenderBuilder" level="warn" additivity="false">
+    <!--<Logger name="recoPrivResearch.recommenderBuilder.KNNRecommenderBuilder" level="debug" additivity="false">-->
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.recommenderBuilder.CosKNNRecommenderBuilder" level="warn" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.recommenderBuilder.VariousSimmRecommenderBuilder" level="warn" additivity="false">
+    <!--<Logger name="recoPrivResearch.recommenderBuilder.VariousSimmRecommenderBuilder" level="debug" additivity="false">-->
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.recommenderBuilder.UserAvgRatingRecommenderBuilder" level="debug" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.recommenderBuilder.ItemAvgRatingRecommenderBuilder" level="debug" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.dataModelBuilder.SybilModelBuilder" level="info" additivity="false">
+    <!--<Logger name="recoPrivResearch.dataModelBuilder.SybilModelBuilder" level="trace" additivity="false">-->
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.tools.ParametersLogging" level="info" additivity="false">
+      <AppenderRef ref="Parameters"/>
+    </Logger>
+    <Logger name="recoPrivResearch.tools.Parameters" level="info" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender" level="info" additivity="false">
+    <!--<Logger name="recoPrivResearch.EvaluateRecommender" level="debug" additivity="false">-->
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="EvaluationTime"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-recoQuality" level="info" additivity="false">
+      <AppenderRef ref="MaeRmse"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-recoIRStats" level="info" additivity="false">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="InfoRetrivalStats"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-precomputations" level="info" additivity="false">
+      <AppenderRef ref="Precomputations"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-aboveThres" level="info" additivity="false">
+      <AppenderRef ref="AboveThres"/>
+    </Logger>
+    <Logger name="recoPrivResearch.recommenderBuilder.KNNRecommenderBuilder-runTime" level="info" additivity="false">
+      <AppenderRef ref="buildRecommender"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-buildMemory" level="info" additivity="false">
+      <AppenderRef ref="buildRecommenderMemory"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-hypotheses" level="info" additivity="false">
+      <AppenderRef ref="hypotheses"/>
+    </Logger>
+    <Logger name="recoPrivResearch.EvaluateRecommender-sizeDistrib" level="info" additivity="false">
+      <AppenderRef ref="sizeDistrib"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

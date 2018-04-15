@@ -1,0 +1,267 @@
+Mahout Change Log
+
+Release 0.9 - unreleased
+
+  MAHOUT-1411: Random test failures from TDigestTest (smarthi)
+
+  MAHOUT-1410: clusteredPoints do not contain a vector id (smarthi, Andrew Musselman)
+
+  MAHOUT-1409: MatrixVectorView has index check error (tdunning)
+
+  MAHOUT-1402: Zero clusters using streaming k-means option in cluster-reuters.sh (smarthi)
+
+  MAHOUT-1401: Resurrect Frequent Pattern mining (smarthi)
+
+  MAHOUT-1400: Remove references to deprecated and removed algorithms from examples scripts (ssc)
+
+  MAHOUT-1399: Fixed multiple slf4j bindings when running Mahout examples issue (sslavic)
+
+  MAHOUT-1398: FileDataModel should provide a constructor with a delimiterPattern (Roy Guo via ssc)
+
+  MAHOUT-1396: Accidental use of commons-math won't work with next Hadoop 2 release (srowen)
+
+  MAHOUT-1394: Undeprecate Lanczos (ssc)
+
+  MAHOUT-1393: Remove duplicated code from getTopTerms and getTopFeatures in AbstractClusterWriter (Diego Carrion via smarthi)
+
+  MAHOUT-1392: Streaming KMeans should write centroid output to a 'part-r-xxxx' file when executed in sequential mode (smarthi)
+
+  MAHOUT-1390: SVD hangs for certain inputs (tdunning)
+
+  MAHOUT-1389: Complementary Naive Bayes Classifier not getting called when "-c" option is activated (Gouri Shankar Majumdar via smarthi)
+
+  MAHOUT-1384: Executing the MR version of Naive Bayes/CNB of classify_20newgroups.sh fails in seqdirectory step (smarthi)
+
+  MAHOUT-1382: Upgrade Mahout third party jars for 0.9 Release (smarthi)
+
+  MAHOUT-1380: Streaming KMeans fails when executed in Sequential Mode (smarthi)
+
+  MAHOUT-1379: ClusterQualitySummarizer fails with the new T-Digest for clusters with 1 data point (smarthi)
+
+  MAHOUT-1378: Running Random Forest with Ignored features fails when loading feature descriptor from JSON file (Sam Wu via smarthi)
+
+  MAHOUT-1377: Exclude JUnit.jar from tarball (Sergey Svinarchuk via smarthi)
+
+  MAHOUT-1371: Arff loader can misinterpret nominals with integer, real or string (Mansur Iqbal via smarthi)
+
+  MAHOUT-1370: Vectordump doesn't write to output file in MapReduce Mode (smarthi)
+
+  MAHOUT-1368: Convert OnlineSummarizer to use the new TDigest (tdunning)
+
+  MAHOUT-1367: WikipediaXmlSplitter --> Exception in thread "main" java.lang.NullPointerException (smarthi)
+
+  MAHOUT-1364: Upgrade Mahout codebase to Lucene 4.6 (Frank Scholten)
+
+  MAHOUT-1363: Rebase packages in mahout-scala (dlyubimov)
+
+  MAHOUT-1362: Remove examples/bin/build-reuters.sh (smarthi)
+
+  MAHOUT-1361: Online algorithm for computing accurate Quantiles using 1-D clustering (tdunning)
+
+  MAHOUT-1358: StreamingKMeansThread throws IllegalArgumentException when REDUCE_STREAMING_KMEANS is set to true (smarthi)
+
+  MAHOUT-1355: InteractionValueEncoder produces wrong traceDictionary entries (Johannes Schulte via smarthi)
+
+  MAHOUT-1353: Visibility of preparePreferenceMatrix directory location (Pat Ferrel, ssc)
+
+  MAHOUT-1352: Option to change RecommenderJob output format (Pat Ferrel, ssc)
+
+  MAHOUT-1351: Adding DenseVector support to AbstractCluster (David DeBarr via smarthi)
+
+  MAHOUT-1349: Clusterdumper/loadTermDictionary crashes when highest index in (sparse) dictionary vector is larger than dictionary vector size (Andrew Musselman via smarthi)
+
+  MAHOUT-1347: Add Streaming K-Means clustering algorithm to examples/bin/cluster-reuters.sh (smarthi)
+
+  MAHOUT-1345: Enable randomised testing for all Mahout modules (Dawid Weiss, Isabel, sslavic, Frank Scholten, smarthi)
+
+  MAHOUT-1343: JSON output format support in cluster dumper (Telvis Calhoun via sslavic)
+
+  MAHOUT-1333: Fixed examples bin directory permissions in distribution archives (Mike Percy via sslavic)
+
+  MAHOUT-1319: seqdirectory -filter argument silently ignored when run as MR (smarthi)
+
+  MAHOUT-1317: Clarify some of the messages in Preconditions.checkArgument (Nikolai Grinko, smarthi)
+
+  MAHOUT-1314: StreamingKMeansReducer throws NullPointerException when REDUCE_STREAMING_KMEANS is set to true (smarthi)
+
+  MAHOUT-1313: Fixed unwanted integral division bug in RowSimilarityJob downsampling code where precision should have been retained (sslavic)
+
+  MAHOUT-1312: LocalitySensitiveHashSearch does not limit search results (sslavic)
+
+  MAHOUT-1308: Cannot extend CandidateItemsStrategy due to restricted visibility (David Geiger, smarthi)
+
+  MAHOUT-1301: toString() method of SequentialAccessSparseVector has excess comma at the end (Alexander Senov, smarthi)
+
+  MAHOUT-1297: New module for linear algebra scala DSL (dlyubimov)
+
+  MAHOUT-1296: Remove deprecated algorithms (ssc)
+
+  MAHOUT-1295: Excluded all Maven's target directories from distribution archives (sslavic)
+
+  MAHOUT-1294: Cleanup previously installed artifacts from CI server local repository (sslavic)
+
+  MAHOUT-1293: Source distribution tar.gz archive cannot be unpacked on Linux (sslavic)
+
+  MAHOUT-1292: lucene2seq should validate the 'id' field (Frank Scholten via smarthi)
+
+  MAHOUT-1291: MahoutDriver yields cosmetically suboptimal exception when bin/mahout runs without args, on some Hadoop versions (srowen)
+
+  MAHOUT-1290: Issue when running Mahout Recommender Demo (Helder Garay Martins via smarthi)
+
+  MAHOUT-1289: Move downsampling code into RowSimilarityJob (ssc)
+
+  MAHOUT-1287: classifier.sgd.CsvRecordFactory incorrectly parses CSV format (Alex Franchuk via smarthi)
+
+  MAHOUT-1285: Arff loader can misparse string data as double (smarthi)
+
+  MAHOUT-1284: DummyRecordWriter's bug with reused Writables (Maysam Yabandeh via smarthi)
+
+  MAHOUT-1275: Dropped bz2 distribution format for source and binaries (sslavic)
+
+  MAHOUT-1265: Multilayer Perceptron (Yexi Jiang via smarthi)
+
+  MAHOUT-1261: TasteHadoopUtils.idToIndex can return an int that has size Integer.MAX_VALUE (Carl Clark, smarthi)
+
+  MAHOUT-1242: No key redistribution function for associative maps (Tharindu Rusira via smarthi)
+
+  MAHOUT-1030: Regression: Clustered Points Should be WeightedPropertyVectorWritable not WeightedVectorWritable (Andrew Musselman, Pat Ferrel, Jeff Eastman, Lars Norskog, smarthi)
+
+Release 0.8 - 2013-07-25
+
+  MAHOUT-1272: Parallel SGD matrix factorizer for SVDrecommender (Peng Cheng via ssc)
+
+  MAHOUT-1271: classify-20newsgroups.sh fails during the seqdirectory step (smarthi)
+  
+  MAHOUT-1269: Cleanup deprecated Lucene 3.x API calls in lucene2seq utility unit tests (smarthi)
+
+  MAHOUT-833: Make conversion to sequence files map-reduce (Josh Patterson, smarthi)
+
+  MAHOUT-1268: Wrong output directory for CVB (Mark Wicks via ssc)
+
+  MAHOUT-1264: Performance optimizations in RecommenderJob (ssc)
+
+  MAHOUT-1262: Cleanup LDA code (ssc)
+
+  MAHOUT-1255: Fix for weights in Multinomial sometimes overflowing in BallKMeans (dfilimon)
+
+  MAHOUT-1254: Final round of cleanup for StreamingKMeans (dfilimon)
+
+  MAHOUT-1263: Serialise/Deserialise Lambda value for OnlineLogisticRegression (Mike Davy via smarthi)  
+
+  MAHOUT-1258: Another shot at findbugs and checkstyle (ssc)
+
+  MAHOUT-1253: Add experiment tools for StreamingKMeans, part 1 (dfilimon)
+
+  MAHOUT-884:  Matrix Concatenate Utility (Lance Norskog via smarthi)
+
+  MAHOUT-1250: Deprecate unused algorithms (ssc)
+
+  MAHOUT-1251: Optimize MinHashMapper (ssc)
+
+  MAHOUT-1211: Disabled swallowing of IOExceptions is Closeables.close for writers (dfilimon)
+
+  MAHOUT-1164: Make ARFF integration generate meta-data in JSON format (Marty Kube via ssc)
+
+  MAHOUT-1164: Make ARFF integration generate meta-data in JSON format (Marty Kube via ssc)
+
+  MAHOUT-1163: Make random forest classifier meta-data file human readable (Marty Kube via ssc)
+
+  MAHOUT-1243: Dictionary file format in Lucene-Mahout integration is not in SequenceFileFormat (ssc)
+
+  MAHOUT-974:  org.apache.mahout.cf.taste.hadoop.als.ParallelALSFactorizationJob use integer as userId and itemId (ssc)
+
+  MAHOUT-1052: Add an option to MinHashDriver that specifies the dimension of vector to hash (indexes or values) (Elena Smirnova via smarthi)
+
+  MAHOUT-1237: Total cluster cost isn't computed properly (dfilimon)
+
+  MAHOUT-1196: LogisticModelParameters uses csv.getTargetCategories() even if csv is not used. (Vineet Krishnan via ssc)
+
+  MAHOUT-1224: Add the option of running a StreamingKMeans pass in the Reducer before BallKMeans (dfilimon)
+
+  MAHOUT-993:  Some vector dumper flags are expecting arguments. (Andrew Look via robinanil)
+
+  MAHOUT-1228: Cleanup .gitignore (Stevo Slavic via ssc)
+
+  MAHOUT-1047: CVB hangs after completion (Angel Martinez Gonzalez via smarthi)
+  
+  MAHOUT-1235: ParallelALSFactorizationJob does not use VectorSumCombiner (ssc)
+
+  MAHOUT-1230: SparceMatrix.clone() is not deep copy (Maysam Yabandeh via tdunning)
+  
+  MAHOUT-1232: VectorHelper.topEntries() throws a NPE when number of NonZero elements in vector < maxEntries (smarthi)
+
+  MAHOUT-1229: Conf directory content from Mahout distribution archives cannot be unpacked (Stevo Slavic via smarthi)
+  
+  MAHOUT-1213: SSVD job doesn't clean it's temp dir, and fails when seeing it again (smarthi)
+
+  MAHOUT-1223: Fixed point skipped in StreamingKMeans when iterating through centroids from a reducer (dfilimon)
+
+  MAHOUT-1222: Fix total weight in FastProjectionSearch (dfilimon)
+
+  MAHOUT-1219: Remove LSHSearcher from StreamingKMeansTest. It causes it to sometimes fail (dfilimon)
+
+  MAHOUT-1221: SparseMatrix.viewRow is sometimes readonly. (Maysam Yabandeh via smarthi)
+
+  MAHOUT-1219: Remove LSHSearcher from SearchQualityTest. It causes it to fail, but the failure is not very meaningful (dfilimon)
+
+  MAHOUT-1217: Nearest neighbor searchers sometimes fail to remove points: fix in FastProjectionSearch's searchFirst (dfilimon)
+
+  MAHOUT-1216: Add locality sensitive hashing and a LocalitySensitiveHash searcher (dfilimon)
+
+  MAHOUT-1181: Adding StreamingKMeans MapReduce classes (dfilimon)
+
+  MAHOUT-1212: Incorrect classify-20newsgroups.sh file description (Julian Ortega via smarthi)
+   
+  MAHOUT-1209: DRY out maven-compiler-plugin configuration (Stevo Slavic via smarthi) 
+
+  MAHOUT-1207: Fix typos in description in parent pom (Stevo Slavic via smarthi)  
+
+  MAHOUT-1199: Improve javadoc comments of mahout-integration (Angel Martinez Gonzalez via smarthi)  
+
+  MAHOUT-1162: Adding BallKMeans and StreamingKMeans clustering algorithms (dfilimon)
+
+  MAHOUT-1205: ParallelALSFactorizationJob should leverage the distributed cache (ssc)
+
+  MAHOUT-1156: Adding nearest neighbor Searchers (dfilimon)
+
+  MAHOUT-1202: Speed up Vector operations (dfilimon)
+
+  MAHOUT-1155: Make MatrixSlice a Vector (and fix Centroid cloning; MAHOUT-1202) (dfilimon)
+
+  MAHOUT-1189: CosineDistanceMeasure doesn't return 0 for two 0 vectors (dfilimon)
+
+  MAHOUT-1180: Multinomial<T> throws ConcurrentModificationException when iterating and setting probabilities (dfilimon)
+
+  MAHOUT-1192: Speed up Vector Operations (robinanil)
+
+  MAHOUT-1191: Cleanup Vector Benchmarks make it less variable (robinanil)
+
+  MAHOUT-1190: SequentialAccessSparseVector function assignment is very slow and other iterator woes (robinanil)
+
+  MAHOUT-1188: Inconsistent reference to Lucene versions in code and POM (smarthi)
+
+  MAHOUT-1161: Unable to run CJKAnalyzer for conversion of a sequence file to sparse vector due to instantiation exception (ssc)
+
+  MAHOUT-1187: Update Commons Lang to Commons Lang3 (smarthi)
+
+  MAHOUT-1184 Another take at pmd, findbugs and checkstyle (ssc)
+
+  MAHOUT-1182: Remove useless append (Dave Brosius via tdunning)
+
+  MAHOUT-1176: Introduce a changelog file to raise contributors attribution (ssc)
+
+  MAHOUT-1108: Allows cluster-reuters.sh example to be executed on a cluster (elmer.garduno via gsingers) 
+
+  MAHOUT-961: Fix issue in decision forest tree visualizer to properly show stems of tree (Ikumasa Mukai via gsingers)
+
+  MAHOUT-944: Create SequenceFiles out of Lucene document storage (no term vectors required) (Frank Scholten, gsingers)
+
+  MAHOUT-958: Fix issue with globs in RepresentativePointsDriver (Adam Baron, Vikram Dixit K, ehgjr via gsingers)
+
+  MAHOUT-1084: Fixed issue with too many clusters in synthetic control example (liutengfei, gsingers)
+
+  MAHOUT-1103: Fixed issue with splitting clusters on Hadoop (Matt Molek, gsingers)
+
+  MAHOUT-1126: Filter out bad META-INF files in job packaging (Pat Ferrel, gsingers)
+
+  MAHOUT-1211: Change deprecated Closeables.closeQuietly calls (smarthi, gsingers, srowen, dlyubimov)
